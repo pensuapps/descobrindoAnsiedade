@@ -1,30 +1,33 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view />
+  <v-app class="background-purple">
+    <v-app-bar app v-if="$route.name != 'home'" flat dense color="#521ba6">
+      <v-container>
+        <v-icon icon="mdi-arrow-left" color="white" @click="goHome"></v-icon>
+      </v-container>
+    </v-app-bar>
+    <v-main>
+      <router-view />
+    </v-main>
+  </v-app>
 </template>
 
+<script>
+  export default {
+    name: 'App',
+
+    methods: {
+      goHome() {
+        this.$router.push('/')
+      },
+    },
+  }
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
+  .background-purple {
+    background: radial-gradient(circle, #6b23d9, #521ba6) !important;
+    background-repeat: no-repeat !important;
+    -webkit-font-smoothing: antialiased !important;
+    color: white !important;
+  }
 </style>
