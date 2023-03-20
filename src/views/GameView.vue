@@ -17,21 +17,27 @@
         </h3>
       </div>
       <div class="full-width d-flex justify-space-between">
-        <v-btn
-          icon="mdi-thumb-up"
-          variant="flat"
-          color="#94BF36"
-          @click="handleAnswer(1)"
-        >
-        </v-btn>
+        <div>
+          <v-btn
+            icon="mdi-thumb-up"
+            variant="flat"
+            color="#94BF36"
+            @click="handleAnswer(1)"
+          >
+          </v-btn>
+          <p class="text-center">Sim</p>
+        </div>
 
-        <v-btn
-          icon="mdi-thumb-down"
-          variant="flat"
-          color="#BF3A22"
-          @click="handleAnswer(0)"
-        >
-        </v-btn>
+        <div>
+          <v-btn
+            icon="mdi-thumb-down"
+            variant="flat"
+            color="#BF3A22"
+            @click="handleAnswer(0)"
+          >
+          </v-btn>
+          <p class="text-center">Não</p>
+        </div>
       </div>
     </template>
     <template v-else>

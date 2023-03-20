@@ -4,13 +4,11 @@
   >
     <div class="full-width">
       <v-img
-        src="../assets/home.png"
-        max-height="212"
-        max-width="328"
+        src="../assets/home.jpeg"
         cover
         class="bg-grey-lighten-2 rounded-lg mx-auto"
       ></v-img>
-      <h2 class="text-center">Descobrindo a Ansiedade</h2>
+
       <article class="text-justify mt-3">
         Olá, vamos saber como você se sente na escola, e com os amiguinhos (as)?
       </article>
