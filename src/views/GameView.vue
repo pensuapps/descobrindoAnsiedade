@@ -50,20 +50,21 @@
           class="bg-grey-lighten-2 rounded-lg mx-auto"
         ></v-img>
 
-        <h3 class="text-justify mt-3">
+        <h3 class="text-justify mt-3" v-if="showLikeButtons">
           <template v-if="score < 6">
-            <span
-              >Você parece estar se divertindo e aprendendo coisas legais na
+            <span>
+              Você parece estar se divertindo e aprendendo coisas legais na
               escola, continue assim!</span
             >
           </template>
           <template v-else>
-            <span
-              >Você deve conversar com seus pais e professores sobre o que
-              acontece na escola.</span
-            >
+            <span>
+              Você deve conversar com seus pais e professores sobre o que
+              acontece na escola.
+            </span>
           </template>
         </h3>
+        <h3 v-else>Ficamos felizes por ter respondido tudo! Obrigado!</h3>
       </div>
       <div class="full-width">
         <div class="d-flex justify-space-between" v-if="showLikeButtons">
