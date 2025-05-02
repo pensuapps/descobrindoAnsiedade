@@ -94,7 +94,7 @@
 
 <script>
   import { depressionQuestions } from '../data/questions'
-
+  import { writeToFirestore } from '../plugins/firebase'
   export default {
     name: 'GameView',
     data: () => ({
@@ -115,14 +115,23 @@
       questionIndex() {
         if (this.lastQuestion) {
           this.showResult = true
+          if (window.location.hostname !== 'localhost') {
+            writeToFirestore({
+              score: this.score,
+              dia: new Date().toLocaleDateString(),
+              aplicacao: 'descobrindo_a_ansiedade',
+            })
+          }
         }
       },
     },
     methods: {
-      handleAnswer(value) {
+      async handleAnswer(value) {
         this.score += value
+
         if (!this.lastQuestion) {
           this.questionIndex++
+          return
         }
       },
       handleLike() {
