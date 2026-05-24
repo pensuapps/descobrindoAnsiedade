@@ -173,6 +173,6 @@
   }
 
   .max-height {
-    min-height: 100dvh;
+    min-height: calc(100dvh - 4rem);
   }
 </style>
