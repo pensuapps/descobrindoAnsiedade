@@ -1,6 +1,6 @@
 <template>
   <v-container
-    class="fill-height d-flex flex-column justify-space-between content-size"
+    class="max-height d-flex flex-column justify-space-between content-size"
   >
     <template v-if="!showResult">
       <div class="full-width">
@@ -23,6 +23,7 @@
             variant="flat"
             color="#94BF36"
             @click="handleAnswer(1)"
+            size="x-large"
           >
           </v-btn>
           <p class="text-center">Sim</p>
@@ -34,6 +35,7 @@
             variant="flat"
             color="#BF3A22"
             @click="handleAnswer(0)"
+            size="x-large"
           >
           </v-btn>
           <p class="text-center">Não</p>
@@ -76,6 +78,7 @@
             color="#3174CC"
             dark
             @click="handleLike"
+            size="x-large"
           >
           </v-btn>
           <v-btn
@@ -83,10 +86,16 @@
             variant="flat"
             color="#BF3A22"
             @click="handleLike"
+            size="x-large"
           >
           </v-btn>
         </div>
-        <a class="text-center" @click="goToAbout">Ficou curioso? Clica aqui</a>
+        <a
+          class="text-center bg-primary rounded-pill py-2 px-4 cursor-pointer mt-2"
+          @click="goToAbout"
+        >
+          Ficou curioso? Clica aqui
+        </a>
       </div>
     </template>
   </v-container>
@@ -161,5 +170,9 @@
   a {
     display: block;
     color: white;
+  }
+
+  .max-height {
+    min-height: 100dvh;
   }
 </style>

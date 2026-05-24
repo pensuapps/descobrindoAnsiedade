@@ -1,6 +1,6 @@
 <template>
   <v-container
-    class="fill-height d-flex flex-column justify-space-between content-size"
+    class="max-height d-flex flex-column justify-space-between content-size"
   >
     <div class="full-width">
       <v-img
@@ -34,17 +34,40 @@
     </div>
     <div class="full-width grid-3" v-if="showButtons">
       <div class="d-flex flex-column align-center" @click="handleButton">
-        <v-btn icon="mdi-thumb-up" variant="flat" color="#3174CC"> </v-btn>
+        <v-btn
+          icon="mdi-thumb-up"
+          variant="flat"
+          color="#3174CC"
+          size="x-large"
+        >
+        </v-btn>
         <p class="text-center">Entendi</p>
       </div>
       <div class="d-flex flex-column align-center" @click="handleButton">
-        <v-btn icon="mdi-lightbulb" variant="flat" color="#94BF36"> </v-btn>
+        <v-btn
+          icon="mdi-lightbulb"
+          variant="flat"
+          color="#94BF36"
+          size="x-large"
+        >
+        </v-btn>
         <p class="text-center">Interessante</p>
       </div>
       <div class="d-flex flex-column align-center" @click="handleButton">
-        <v-btn icon="mdi-thumb-down" variant="flat" color="#BF3A22"> </v-btn>
+        <v-btn
+          icon="mdi-thumb-down"
+          variant="flat"
+          color="#BF3A22"
+          size="x-large"
+        >
+        </v-btn>
         <p class="text-center">Não Entendi</p>
       </div>
+    </div>
+    <div class="mt-4">
+      <v-btn color="primary" block rounded="xl" @click="gotoHome">
+        Voltar para a tela inicial
+      </v-btn>
     </div>
   </v-container>
 </template>
@@ -64,6 +87,9 @@
       },
       goToVideo2() {
         window.open('https://www.youtube.com/watch?v=fC9CrACfjaQ', '_blank')
+      },
+      gotoHome() {
+        this.$router.push('/')
       },
     },
   }
@@ -86,5 +112,9 @@
 
   a {
     text-decoration: underline;
+  }
+
+  .max-height {
+    min-height: 100dvh;
   }
 </style>
