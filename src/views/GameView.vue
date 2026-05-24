@@ -96,6 +96,17 @@
         >
           Ficou curioso? Clica aqui
         </a>
+        <div class="mt-4">
+          <v-btn
+            color="primary py-2"
+            variant="flat"
+            block
+            rounded="xl"
+            @click="gotoHome"
+          >
+            Voltar para a tela inicial
+          </v-btn>
+        </div>
       </div>
     </template>
   </v-container>
@@ -148,6 +159,9 @@
       },
       goToAbout() {
         this.$router.push('/sobre')
+      },
+      gotoHome() {
+        this.$router.push('/')
       },
     },
   }

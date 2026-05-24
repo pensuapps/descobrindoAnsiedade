@@ -64,11 +64,6 @@
         <p class="text-center">Não Entendi</p>
       </div>
     </div>
-    <div class="mt-4">
-      <v-btn color="primary" block rounded="xl" @click="gotoHome">
-        Voltar para a tela inicial
-      </v-btn>
-    </div>
   </v-container>
 </template>
 
