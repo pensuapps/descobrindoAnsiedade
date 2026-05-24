@@ -91,10 +91,10 @@
           </v-btn>
         </div>
         <a
-          class="text-center bg-primary rounded-pill py-2 px-4 cursor-pointer mt-2"
+          class="text-center bg-primary rounded-pill py-2 px-4 cursor-pointer mt-2 d-flex align-center justify-center"
           @click="goToAbout"
         >
-          Ficou curioso? Clica aqui
+          <v-icon>mdi-lightbulb</v-icon>Ficou curioso? Clica aqui
         </a>
         <div class="mt-4">
           <v-btn
