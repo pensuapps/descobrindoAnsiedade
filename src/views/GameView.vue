@@ -128,7 +128,7 @@
         return depressionQuestions.questions[this.questionIndex]
       },
       lastQuestion() {
-        return this.questionIndex + 1 === depressionQuestions.questions.length
+        return this.questionIndex === depressionQuestions.questions.length
       },
     },
     watch: {
